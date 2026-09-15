@@ -1,0 +1,14 @@
+USE RetailDW;
+
+GO
+
+-- creation of the DimProuct table
+CREATE TABLE DimProduct(
+	ProductKey INT IDENTITY(1,1) PRIMARY KEY,
+	ProductID INT NOT NULL UNIQUE,
+	ProductName VARCHAR(100) NOT NULL, 
+	Category VARCHAR(100) NULL, 
+	Price DECIMAL(18,2) NOT NULL, 
+	CreateDate DATETIME2 NOT NULL DEFAULT GETDATE(),
+	ModifiedDate DATETIME2 NOT NULL DEFAULT GETDATE()
+);
