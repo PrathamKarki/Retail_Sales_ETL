@@ -1,0 +1,14 @@
+USE RetailDW;
+
+CREATE TABLE Audit(
+	AuditID INT IDENTITY(1,1) PRIMARY KEY, 
+	PackageName VARCHAR(255) NOT NULL, 
+	SourceFile VARCHAR(255) NULL,
+	StartTime DATETIME2 NOT NULL, 
+	EndTime DATETIME2 NULL, 
+	Status VARCHAR(50) NOT NULL, 
+	RecordsRead INT NOT NULL DEFAULT 0, 
+	RecordsInserted INT NOT NULL DEFAULT 0, 
+	RecordsRejected INT NOT NULL DEFAULT 0, 
+	ErrorMessage VARCHAR(1000) NULL
+);
