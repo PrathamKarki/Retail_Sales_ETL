@@ -1,0 +1,11 @@
+USE RetailDW;
+GO
+
+CREATE TABLE RejectedRecords(
+	RejectedRecordID INT IDENTITY(1,1) PRIMARY KEY, 
+	SourceFile VARCHAR(255) NOT NULL, 
+	RecordKey VARCHAR(100) NULL, 
+	ErrorReason VARCHAR(500) NOT NULL, 
+	ErrorDate DATETIME2 NOT NULL DEFAULT GETDATE()
+);
+
