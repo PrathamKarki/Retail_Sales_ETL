@@ -1,48 +1,130 @@
 StoreID,StoreName,City,State
-S001,Delhi Store,Delhi,Delhi
-S002,Gurgaon Store,Gurgaon,Haryana
-S003,Jaipur Store,Jaipur,Rajasthan
-S004,Mumbai Central,Mumbai,Maharashtra
-S005,Pune Store,Pune,Maharashtra
-S006,Bangalore Store,Bangalore,Karnataka
-S007,Hyderabad Store,Hyderabad,Telangana
-S008,Chennai Store,Chennai,Tamil Nadu
-S009,Kolkata Store,Kolkata,West Bengal
-S010,Ahmedabad Store,Ahmedabad,Gujarat
-S011,Surat Store,Surat,Gujarat
-S012,Lucknow Store,Lucknow,Uttar Pradesh
-S013,Kanpur Store,Kanpur,Uttar Pradesh
-S014,Indore Store,Indore,Madhya Pradesh
-S015,Bhopal Store,Bhopal,Madhya Pradesh
-S016,Nagpur Store,Nagpur,Maharashtra
-S017,Patna Store,Patna,Bihar
-S018,Ranchi Store,Ranchi,Jharkhand
-S019,Chandigarh Store,Chandigarh,Chandigarh
-S020,Amritsar Store,Amritsar,Punjab
-S021,Ludhiana Store,Ludhiana,Punjab
-S022,Dehradun Store,Dehradun,Uttarakhand
-S023,Kochi Store,Kochi,Kerala
-S024,Thiruvananthapuram Store,Thiruvananthapuram,Kerala
-S025,Bhubaneswar Store,Bhubaneswar,Odisha
-S026,Guwahati Store,Guwahati,Assam
-S027,Coimbatore Store,Coimbatore,Tamil Nadu
-S028,Visakhapatnam Store,Visakhapatnam,Andhra Pradesh
-S029,Mysore Store,Mysore,Karnataka
-S030,Vadodara Store,Vadodara,Gujarat
-S005,Pune Store Duplicate,Pune,Maharashtra
-S010,Ahmedabad Store Duplicate,Ahmedabad,Gujarat
-S015,Bhopal Store Duplicate,Bhopal,Madhya Pradesh
-S020,Amritsar Store Duplicate,Amritsar,Punjab
-S025,Bhubaneswar Store Duplicate,Bhubaneswar,Odisha
-,Missing Store ID,Delhi,Delhi
-   ,Whitespace Store ID,Mumbai,Maharashtra
- S031,Leading Space Store ID,Delhi,Delhi
-S032 ,Trailing Space Store ID,Pune,Maharashtra
-S033,,Delhi,Delhi
-S034,   ,Mumbai,Maharashtra
-S035,Missing City,,Maharashtra
-S036,Whitespace City,   ,Gujarat
-S037,Missing State,Jaipur,
-S038,Whitespace State,Jaipur,   
-S039,,,
-S040,Missing City and State,,
+S033,Delhi Store,Delhi,Delhi
+S061,Bhopal Store,Bhopal,Madhya Pradesh
+S091,Mumbai Outlet,Mumbai,Maharashtra
+S103,Nagpur Store,Nagpur,
+S074,Chandigarh Store,Kolkata,West Bengal
+S071,Chandigarh Store,Chandigarh,
+S055,Jaipur Mart,Jaipur,RJ
+S012,Patna Store,Patna,Bihar
+S026,Bangalore Store,Bangalore,Karnataka
+S081,Hyderabad Hub,Hyderabad,Telangana
+S002,Kolkata Superstore,Kolkata,West Bengal
+S028,Chandigarh Store,Chandigarh,Chandigarh
+S060,Lucknow Store,Lucknow,Uttar Pradesh
+S024,Delhi Store,Delhi,Delhi
+S021,Coimbatore Store,Coimbatore,Tamil Nadu
+S043,Chennai Superstore,Mumbai,Maharashtra
+S040,Pune Store,Pune,Maharashtra
+S056,Bhopal Store,Bhopal,Madhya Pradesh
+S073,,Pune,Maharashtra
+S030,  Surat Store  ,Surat,Gujarat
+S073,,Pune,Maharashtra
+S064,Coimbatore Superstore,,Tamil Nadu
+S001,,Bhopal,Madhya Pradesh
+S040,Pune Store,Delhi,Delhi
+S022,Surat Store,Surat,Gujarat
+S109,Kolkata Store,Kolkata,West Bengal
+S108,Bangalore Store,Bangalore,Karnataka
+S078,Kolkata Mart,Kolkata,West Bengal
+S011,Pune Hub,Pune,Maharashtra
+S047,,Lucknow,Uttar Pradesh
+S080,  Ahmedabad Mart  ,Ahmedabad,Gujarat
+S043,Chennai Superstore,Chennai,Tamil Nadu
+S069,  Patna Store  ,Patna,Bihar
+S048,Gurgaon Superstore,Gurgaon,
+S084,Pune Hub,Pune,Maharashtra
+S004,Ahmedabad Store,Ahmedabad,
+S075,Jaipur Store,Jaipur,Rajasthan
+S066,Ahmedabad Store,Ahmedabad,Gujarat
+S038,Bangalore Hub,Bangalore,Karnataka
+S007,Delhi Store,Delhi,Delhi
+S009,Pune Store,Pune,Maharashtra
+S034,Jaipur Store,Kanpur,Uttar Pradesh
+S104,Bangalore Outlet,Bangalore,Karnataka
+S101,Patna Store,Patna,
+S035,Mumbai Superstore,Mumbai,Maharashtra
+S013,Jaipur Store,Jaipur,Rajasthan
+S014,Chennai Center,Chennai,Tamil Nadu
+S031,Ahmedabad Mart,,Gujarat
+S048,Gurgaon Superstore,Gurgaon,
+S017,Lucknow Store,Lucknow,Uttar Pradesh
+S097,Ahmedabad Hub,,Gujarat
+S076,Surat Store,,Gujarat
+S087,Chandigarh Center,Chandigarh,
+S006,Jaipur Store,Jaipur,Rajasthan
+S086,Jaipur Superstore,Jaipur,Rajasthan
+S058,Noida Store,Noida,Uttar Pradesh
+S105,  Bhopal Store  ,Bhopal,Madhya Pradesh
+,Gurgaon Store,Gurgaon,Haryana
+S010,Lucknow Hub,Lucknow,Uttar Pradesh
+S052,,Noida,Uttar Pradesh
+S050,Chandigarh Store,Chandigarh,Chandigarh
+S102,Surat Store,Surat,Gujarat
+S110,Surat Mart,Surat,Gujarat
+S051,Ahmedabad Hub,Ahmedabad,Gujarat
+S093,Chandigarh Store,Chandigarh,
+S016,Mumbai Outlet,,Maharashtra
+S054,Surat Store,Kanpur,Uttar Pradesh
+S096,Jaipur Store,,Rajasthan
+S045,Nagpur Store,Nagpur,Maharashtra
+S082,Chennai Superstore,Chennai,Tamil Nadu
+S092,Kolkata Mart,Kolkata,West Bengal
+S063,Gurgaon Superstore,Gurgaon,Haryana
+S099,Bhopal Mart,Bhopal,Madhya Pradesh
+S037,Nagpur Store,Nagpur,Maharashtra
+S077,Noida Store,,Uttar Pradesh
+S029,Surat Store,Surat,Gujarat
+S039,Indore Store,Indore,Madhya Pradesh
+,Kanpur Store,Kanpur,Uttar Pradesh
+S036,  Pune Store  ,Pune,Maharashtra
+S077,Noida Store,Indore,Madhya Pradesh
+S003,Delhi Store,Delhi,Delhi
+S105,  Bhopal Store  ,Bhopal,Madhya Pradesh
+S107,Pune Store,Pune,Maharashtra
+S034,Jaipur Store,Jaipur,Rajasthan
+S083,Indore Store,Indore,Madhya Pradesh
+S046,,Gurgaon,Haryana
+S070,Jaipur Store,,Rajasthan
+,Indore Store,Indore,Madhya Pradesh
+S069,  Patna Store  ,Patna,Bihar
+S059,Noida Store,Noida,
+S023,Pune Store,Pune,Maharashtra
+S039,Indore Store,Indore,Madhya Pradesh
+S049,  Hyderabad Store  ,Hyderabad,Telangana
+S068,Coimbatore Store,Coimbatore,Tamil Nadu
+S062,,Patna,Bihar
+S085,Bangalore Hub,Bangalore,Karnataka
+S042,Chennai Store,Chennai,Tamil Nadu
+S072,Kanpur Store,Kanpur,
+S066,Ahmedabad Store,Ahmedabad,Gujarat
+S067,Bangalore Outlet,Bangalore,Karnataka
+S018,Kolkata Store,Kolkata,West Bengal
+S091,Mumbai Outlet,Mumbai,Maharashtra
+S008,Mumbai Superstore,Mumbai,Maharashtra
+S094,Chandigarh Store,Chandigarh,Chandigarh
+S095,Nagpur Store,Nagpur,Maharashtra
+S061,Bhopal Store,Bhopal,Madhya Pradesh
+S079,Bangalore Store,Bangalore,Karnataka
+S100,Pune Mart,Pune,Maharashtra
+S065,  Gurgaon Store  ,Gurgaon,Haryana
+S063,Gurgaon Superstore,Gurgaon,Haryana
+S027,Jaipur Store,Jaipur,Rajasthan
+S089,Lucknow Outlet,Lucknow,Uttar Pradesh
+S053,Indore Store,Indore,Madhya Pradesh
+S020,Mumbai Hub,Mumbai,Maharashtra
+S054,Surat Store,Surat,GJ
+S041,Patna Store,Patna,
+S057,Bangalore Store,Bangalore,Karnataka
+S003,Delhi Store,Delhi,Delhi
+S025,  Kolkata Store  ,Kolkata,West Bengal
+S015,Coimbatore Store,,Tamil Nadu
+S090,Chandigarh Store,Chandigarh,Chandigarh
+S074,Chandigarh Store,Chandigarh,Chandigarh
+S005,  Kolkata Store  ,Kolkata,West Bengal
+S032,Ahmedabad Superstore,,Gujarat
+S088,Nagpur Store,Nagpur,
+S106,Gurgaon Center,Gurgaon,Haryana
+S019,Coimbatore Store,Coimbatore,Tamil Nadu
+S098,Surat Store,Surat,Gujarat
+S044,  Lucknow Store  ,Lucknow,Uttar Pradesh

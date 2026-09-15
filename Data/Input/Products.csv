@@ -1,72 +1,153 @@
 ProductID,ProductName,Category,Price
-P001,Laptop Pro 14,Electronics,1299.99
-P002,Wireless Mouse,Electronics,29.99
-P003,Mechanical Keyboard,Electronics,89.50
-P004,27 Inch Monitor,Electronics,249.99
-P005,USB-C Hub,Electronics,45.00
-P006,Office Chair,Furniture,199.99
-P007,Standing Desk,Furniture,349.00
-P008,Desk Lamp,Furniture,39.95
-P009,Bookshelf,Furniture,129.50
-P010,Filing Cabinet,Furniture,159.99
-P011,Notebook A5,Stationery,5.99
-P012,Ballpoint Pen Pack,Stationery,8.50
-P013,Whiteboard,Stationery,44.99
-P014,Stapler,Stationery,12.75
-P015,Printer Paper,Stationery,7.25
-P016,Coffee Maker,Appliances,79.99
-P017,Electric Kettle,Appliances,34.50
-P018,Microwave Oven,Appliances,159.99
-P019,Blender,Appliances,64.95
-P020,Toaster,Appliances,42.00
-P021,Water Bottle,Home & Kitchen,18.99
-P022,Lunch Box,Home & Kitchen,15.50
-P023,Storage Container Set,Home & Kitchen,24.99
-P024,Cutlery Set,Home & Kitchen,31.75
-P025,Frying Pan,Home & Kitchen,39.99
-P026,Backpack,Accessories,59.99
-P027,Travel Bag,Accessories,74.50
-P028,Leather Wallet,Accessories,45.00
-P029,Umbrella,Accessories,22.99
-P030,Sunglasses,Accessories,69.95
-P031,Smartphone,Electronics,699.99
-P032,Bluetooth Speaker,Electronics,89.99
-P033,Webcam,Electronics,59.99
-P034,External SSD,Electronics,119.99
-P035,Power Bank,Electronics,39.99
-P036,Desk Organizer,Stationery,14.99
-P037,Marker Set,Stationery,11.50
-P003,Mechanical Keyboard,Electronics,89.50
-P003,Mechanical Keyboard - Duplicate,Electronics,95.00
-P006,Office Chair,Furniture,199.99
-P006,Office Chair - Duplicate,Furniture,210.00
-P010,Filing Cabinet,Furniture,159.99
-P010,Filing Cabinet - Duplicate,Furniture,169.99
-P015,Printer Paper,Stationery,7.25
-P015,Printer Paper - Duplicate,Stationery,9.25
-P020,Toaster,Appliances,42.00
-P020,Toaster - Duplicate,Appliances,49.00
-P025,Frying Pan,Home & Kitchen,39.99
-P025,Frying Pan - Duplicate,Home & Kitchen,45.99
-,Missing Product ID,Electronics,50.00
-   ,Whitespace Product ID,Electronics,25.00
- P038,Leading Space ID,Electronics,55.00
-P039 ,Trailing Space ID,Electronics,55.00
-P040,,Electronics,45.00
-P041,   ,Electronics,45.00
-P042,Missing Category,,50.00
-P043,Whitespace Category,   ,40.00
-P044,Negative Price,Electronics,-10.00
-P045,Zero Price,Electronics,0.00
-P046,Missing Price,Electronics,
-P047,Non Numeric Price,Electronics,abc
-P048,Too Many Decimals,Electronics,12.999
-P049,Missing ID and Name,,25.00
-P050,,,
-P051,Invalid Category,UnknownCategory,15.00
-P052,Negative Price Again,Furniture,-99.99
-P053,Zero Price Again,Stationery,0
-P055,Missing Category 2,,20.00
-P056,Missing Name 2,,30.00
-P057,Invalid Price Text,Electronics,free
-P058,Whitespace Category 2,   ,40.00
+P032,Tablet,,58736
+P030,Study Table,Furniture,30355
+P021,Sweater,clothing,1663
+P004,Laptop,Electronics,87578
+P046,Juicer,Kitchen,11970
+P026,,Kitchen,6013
+P001,MIXER GRINDER,Kitchen,4135
+P070,Saree,Clothing,
+P104,Stylus Pen,Accessories,324
+P053,Stool,Furniture,11853
+P036,Stool,Furniture,26404
+P034,Dining Table,Furniture,42345
+P112,Bookshelf,FURNITURES,8704
+P008,Monitor,Electronics,Rs.19871
+P089,Microwave Oven,kitchen,3090
+P002,Stool,Furniture,-10086
+P058,,Kitchen,4686
+P045,Laptop Bag,Accessories,4501
+P123,Laptop,Electronics,67781
+P006,Mousepad,Accessories,4662
+P014,Induction Cooktop,Kitchen,10620
+P023,Air Fryer,Kitchen,6072
+P086,,Clothing,3998
+P111,USB Cable,Accessories,
+P052,Office Chair,Furniture,N/A
+P082,Electric Kettle,Kitchen,11823
+P056,Pressure Cooker,Kitchen,8284
+P061,Office Chair,Furniture,
+P067,Stylus Pen,Accessories,2203
+P038,Headphones,Electronics,-13968
+P062,Pressure Cooker,Kitchen,932
+P074,Stool,,34385
+P121,Stylus Pen,ACCESSORY,505
+P031,Speaker,Electronics,
+P069,Recliner,Furniture,-3686
+P046,Juicer,Kitchen,11970
+P035,Microwave Oven,Kitchen,Rs.14755
+P015,Jacket,clothing,3789
+P042,Office Chair,Furniture,4514
+,Headphones,Electronics,82867
+P061,Office Chair,Furniture,
+P048,Headphones,Electronics,
+P113,Tablet,Electronics,66462
+P076,Pressure Cooker,Kitchen,0
+P115,Office Chair,Furniture,-12919
+P079,Rice Cooker,Kitchen,-6792
+P071,Keyboard,Accessories,N/A
+P108,Formal Shirt,Clothing,3580
+P054,Camera,ELECTRONICS,50293
+P059,Juicer,Kitchen,N/A
+P060,Sneakers,Clothing,3114
+P101,Office Chair,Furniture,27592
+P099,Webcam,Accessories,963
+P092,Screen Protector,,1261
+P097,Office Chair,Furniture,Rs.25783
+P098,Charger,Accessories,3792
+P114,Sofa,Furniture,19501
+P118,Camera,Electronics,63756
+P027,Blender,Kitchen,7125
+P066,Sofa,FURNITURES,43221
+P057,Sofa,Furniture,26711
+P127,Jacket,Clothing,Rs.519
+P114,Sofa,Furniture,40091
+P005,Formal Shirt,Clothing,3157
+P065,Sofa,FURNITURES,41284
+P083,Cabinet,Furniture,11393
+P038,Headphones,Electronics,-13968
+P010,Charger,ACCESSORY,2540
+P107,Speaker,Electronics,32152
+P018,Printer,Electronics,-44132
+P029,,Accessories,4984
+P025,Induction Cooktop,kitchen,14824
+P063,T-Shirt,Clothing,Rs.3979
+P126,Smartphone,Electronics,47219
+P028,Charger,Accessories,453
+P024,Laptop Bag,Accessories,4834
+P110,T-Shirt,Clothing,-1385
+P080,,Electronics,6824
+P003,Recliner,Furniture,33266
+P047,USB Cable,Accessories,1584
+P066,Sofa,FURNITURES,43221
+P055,Sneakers,clothing,2867
+P119,Stool,Furniture,40406
+P012,Air Fryer,Kitchen,4793
+P068,Keyboard,Accessories,472
+P095,  Power Bank  ,Accessories,961
+P106,Stylus Pen,Accessories,1831
+P120,,Electronics,71039
+,Bed Frame,Furniture,6528
+P115,Office Chair,Furniture,-12919
+P127,Jacket,Clothing,Rs.519
+P128,Mousepad,Accessories,4945
+P091,Microwave Oven,Kitchen,2392
+P124,Blender,Kitchen,
+P017,Stool,Furniture,0
+P051,Pressure Cooker,,8329
+P103,Microwave Oven,Kitchen,
+P090,Laptop,Electronics,44893
+P084,Study Table,Furniture,16823
+P040,Smartwatch,ELECTRONICS,17903
+P020,TOASTER,Kitchen,8116
+P019,Cap,Clothing,-2953
+P109,,Accessories,1358
+P075,Bookshelf,Furniture,18340
+P040,Smartwatch,ELECTRONICS,17903
+P117,Rice Cooker,,2662
+P020,TOASTER,Kitchen,8116
+P078,Tablet,Electronics,34571
+P085,Mixer Grinder,Kitchen,
+P093,Air Fryer,Kitchen,-6878
+P033,Keyboard,accessories,3996
+P037,Recliner,Furniture,Rs.36956
+P050,Jacket,Clothing,1201
+P125,Camera,Electronics,63138
+P072,Wardrobe,Furniture,13010
+P013,Rice Cooker,Kitchen Appliance,3169
+P119,Stool,Furniture,40406
+P009,  Microwave Oven  ,Kitchen,11412
+P043,Office Chair,Furniture,20726
+P116,Office Chair,Electronics,12456
+P081,Stool,,9599
+P102,Sofa,Furniture,
+P007,Speaker,Electronics,58476
+P077,  Study Table  ,Furniture,32192
+P087,Formal Shirt,Clothing,2902
+P044,Dining Table,Furniture,29725
+P015,Jacket,Furniture,34748
+P105,Router,Electronics,36925
+P100,Stool,FURNITURES,43759
+P073,USB Cable,Accessories,4568
+P096,Juicer,Kitchen,7486
+P094,Kurta,Clothing,2655
+P041,Camera,Electronics,26805
+P051,Pressure Cooker,,8329
+P113,Tablet,Electronics,6947
+P064,,Clothing,3661
+,Shorts,Clothing,3493
+P045,Laptop Bag,Accessories,4501
+P130,Shorts,Clothing,1457
+P022,Stool,Furniture,37114
+P088,Camera,Electronics,
+P027,Blender,Kitchen,7125
+,Kurta,Clothing,2145
+P016,Printer,Electronics,59387
+P039,Mousepad,Accessories,2013
+P129,Saree,CLOTHING,1810
+P122,Sneakers,Clothing,Rs.2126
+P083,Cabinet,Furniture,0
+P049,Formal Shirt,Clothing,2288
+P019,Cap,Furniture,31760
+P116,Office Chair,Furniture,9807
+P011,,Clothing,1951
