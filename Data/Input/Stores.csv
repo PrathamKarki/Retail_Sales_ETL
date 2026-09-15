@@ -1,0 +1,48 @@
+StoreID,StoreName,City,State
+S001,Delhi Store,Delhi,Delhi
+S002,Gurgaon Store,Gurgaon,Haryana
+S003,Jaipur Store,Jaipur,Rajasthan
+S004,Mumbai Central,Mumbai,Maharashtra
+S005,Pune Store,Pune,Maharashtra
+S006,Bangalore Store,Bangalore,Karnataka
+S007,Hyderabad Store,Hyderabad,Telangana
+S008,Chennai Store,Chennai,Tamil Nadu
+S009,Kolkata Store,Kolkata,West Bengal
+S010,Ahmedabad Store,Ahmedabad,Gujarat
+S011,Surat Store,Surat,Gujarat
+S012,Lucknow Store,Lucknow,Uttar Pradesh
+S013,Kanpur Store,Kanpur,Uttar Pradesh
+S014,Indore Store,Indore,Madhya Pradesh
+S015,Bhopal Store,Bhopal,Madhya Pradesh
+S016,Nagpur Store,Nagpur,Maharashtra
+S017,Patna Store,Patna,Bihar
+S018,Ranchi Store,Ranchi,Jharkhand
+S019,Chandigarh Store,Chandigarh,Chandigarh
+S020,Amritsar Store,Amritsar,Punjab
+S021,Ludhiana Store,Ludhiana,Punjab
+S022,Dehradun Store,Dehradun,Uttarakhand
+S023,Kochi Store,Kochi,Kerala
+S024,Thiruvananthapuram Store,Thiruvananthapuram,Kerala
+S025,Bhubaneswar Store,Bhubaneswar,Odisha
+S026,Guwahati Store,Guwahati,Assam
+S027,Coimbatore Store,Coimbatore,Tamil Nadu
+S028,Visakhapatnam Store,Visakhapatnam,Andhra Pradesh
+S029,Mysore Store,Mysore,Karnataka
+S030,Vadodara Store,Vadodara,Gujarat
+S005,Pune Store Duplicate,Pune,Maharashtra
+S010,Ahmedabad Store Duplicate,Ahmedabad,Gujarat
+S015,Bhopal Store Duplicate,Bhopal,Madhya Pradesh
+S020,Amritsar Store Duplicate,Amritsar,Punjab
+S025,Bhubaneswar Store Duplicate,Bhubaneswar,Odisha
+,Missing Store ID,Delhi,Delhi
+   ,Whitespace Store ID,Mumbai,Maharashtra
+ S031,Leading Space Store ID,Delhi,Delhi
+S032 ,Trailing Space Store ID,Pune,Maharashtra
+S033,,Delhi,Delhi
+S034,   ,Mumbai,Maharashtra
+S035,Missing City,,Maharashtra
+S036,Whitespace City,   ,Gujarat
+S037,Missing State,Jaipur,
+S038,Whitespace State,Jaipur,   
+S039,,,
+S040,Missing City and State,,
