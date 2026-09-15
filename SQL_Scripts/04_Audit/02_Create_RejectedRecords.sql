@@ -8,4 +8,3 @@ CREATE TABLE RejectedRecords(
 	ErrorReason VARCHAR(500) NOT NULL, 
 	ErrorDate DATETIME2 NOT NULL DEFAULT GETDATE()
 );
-
