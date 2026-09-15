@@ -4,7 +4,7 @@ GO
 
 CREATE TABLE FactSales(
 	SalesKey INT IDENTITY(1,1) PRIMARY KEY, 
-	SaleID VARCHAR(50) NOT NULL UNIQUE, 
+	SaleID INT NOT NULL UNIQUE, 
 	SaleDate DATE NOT NULL, 
 	CustomerKey INT NOT NULL, 
 	ProductKey INT NOT NULL, 
@@ -19,4 +19,3 @@ CREATE TABLE FactSales(
 
 	CONSTRAINT FK_FactSales_DimStore FOREIGN KEY (StoreKey) REFERENCES DimStore(StoreKey)
 );
-	
