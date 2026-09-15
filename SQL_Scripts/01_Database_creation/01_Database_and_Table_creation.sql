@@ -1,0 +1,6 @@
+CREATE DATABASE RetailDW;
+
+USE RetailDW;
+
+GO
+ 
