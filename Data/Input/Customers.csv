@@ -1,0 +1,51 @@
+CustomerID,CustomerName,Email,City,State
+C001,Rahul Sharma,rahul.sharma@gmail.com,Delhi,Delhi
+C002,Amit Kumar,amit.kumar@gmail.com,Gurgaon,Haryana
+C003,Priya Singh,priya.singh@gmail.com,Jaipur,Rajasthan
+C004,Neha Verma,neha.verma@gmail.com,Mumbai,Maharashtra
+C005,Arjun Mehta,arjun.mehta@gmail.com,Pune,Maharashtra
+C006,Sneha Patel,sneha.patel@gmail.com,Ahmedabad,Gujarat
+C007,Rohan Gupta,rohan.gupta@gmail.com,Lucknow,Uttar Pradesh
+C008,Anjali Rao,anjali.rao@gmail.com,Bengaluru,Karnataka
+C009,Vikram Joshi,vikram.joshi@gmail.com,Chandigarh,Chandigarh
+C010,Pooja Nair,pooja.nair@gmail.com,Kochi,Kerala
+C011,Karan Malhotra,karan.malhotra@gmail.com,Delhi,Delhi
+C012,Meera Iyer,meera.iyer@gmail.com,Chennai,Tamil Nadu
+C013,Sanjay Shah,sanjay.shah@gmail.com,Surat,Gujarat
+C014,Kavita Das,kavita.das@gmail.com,Kolkata,West Bengal
+C015,Nitin Yadav,nitin.yadav@gmail.com,Noida,Uttar Pradesh
+C016,Isha Kapoor,isha.kapoor@gmail.com,Mumbai,Maharashtra
+C017,Manish Sinha,manish.sinha@gmail.com,Patna,Bihar
+C018,Divya Menon,divya.menon@gmail.com,Kochi,Kerala
+C019,Aditya Bansal,aditya.bansal@gmail.com,Jaipur,Rajasthan
+C020,Simran Kaur,simran.kaur@gmail.com,Amritsar,Punjab
+C021,Varun Thapa,varun.thapa@gmail.com,Kathmandu,Bagmati
+C022,Riya Joshi,riya.joshi@gmail.com,Pokhara,Gandaki
+C023,Suresh Rai,suresh.rai@gmail.com,Biratnagar,Koshi
+C024,Nisha Gurung,nisha.gurung@gmail.com,Kathmandu,Bagmati
+C025,Deepak Adhikari,deepak.adhikari@gmail.com,Lalitpur,Bagmati
+C026,Anu Shrestha,anu.shrestha@gmail.com,Bhaktapur,Bagmati
+C027,Prakash Lama,prakash.lama@gmail.com,Kathmandu,Bagmati
+C028,Maya Tamang,maya.tamang@gmail.com,Dhulikhel,Bagmati
+C003,Duplicate Customer,duplicate@gmail.com,Jaipur,Rajasthan
+,Missing ID,missing.id@gmail.com,Delhi,Delhi
+C029,,missing.name@gmail.com,Delhi,Delhi
+C030,Invalid Email,invalid-email,Mumbai,Maharashtra
+C031,Invalid Email,invalid@,Pune,Maharashtra
+C032,Invalid Email,@gmail.com,Ahmedabad,Gujarat
+C033,Invalid Email,user.gmail.com,Lucknow,Uttar Pradesh
+C034,Missing Email,,Kochi,Kerala
+C035,Missing Email,,Chennai,Tamil Nadu
+C036,Missing City,missing.city@gmail.com,,Tamil Nadu
+C037,Missing State,missing.state@gmail.com,Delhi,
+C038,Blank Name,   ,Kolkata,West Bengal
+C039,Blank ID,blank.id@gmail.com,Surat,Gujarat
+ C040,Leading Space ID,space.id@gmail.com,Delhi,Delhi
+C041 ,Trailing Space ID,trailing.id@gmail.com,Delhi,Delhi
+C042,Special Email,john@@gmail.com,Mumbai,Maharashtra
+C043,Special Email,john gmail.com,Pune,Maharashtra
+C044,Missing Name,,Delhi,Delhi
+C045,Unknown City,unknown.city@gmail.com,,
+C046,Duplicate Customer 2,duplicate2@gmail.com,Kathmandu,Bagmati
+C046,Duplicate Customer 2,duplicate2b@gmail.com,Kathmandu,Bagmati
+C047,Missing ID,,,
