@@ -1,0 +1,33 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+Debug/
+Release/
+*.cache
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
+# Data generated during ETL
+Data/Archive/*
+Data/Error/*
+
+# Input CSV files
+Data/Input/*.csv
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Keep empty folders
+!Data/Archive/.gitkeep
+!Data/Error/.gitkeep
