@@ -21,8 +21,7 @@ Release/
 Data/Archive/*
 Data/Error/*
 
-# Input CSV files
-Data/Input/*.csv
+
 
 # OS files
 Thumbs.db
