@@ -1,0 +1,3551 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/17/2026 6:52:37 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ICS-LT-J1J8HK3"
+  DTS:CreatorName="INFICS\prkarki"
+  DTS:DTSID="{FCA8D006-16B2-47DB-A2E3-458CD7DEF18D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="03_LoadProducts"
+  DTS:PackageType="5"
+  DTS:VersionBuild="135"
+  DTS:VersionGUID="{797F9E6E-6711-4A49-9BA4-B97F4EF2996B}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FFC_Products]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9A605F8D-1981-4055-AED4-DB2E1FD4D7CD}"
+      DTS:ObjectName="FFC_Products">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Input\Products.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{644A617D-5FB9-4F15-A92E-6472009D77E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductName"
+              DTS:DTSID="{77A1BEB1-74DD-4EA6-9346-5BE183424223}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{09D2C117-04F8-4842-931B-1DEFA2900BA9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Price"
+              DTS:DTSID="{A2414D0D-0DB4-4ACD-82A4-F13ECA471AF5}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2C0C1E4A-6766-4FBF-88DA-82C59B8AF94C}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Input\Products.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{3E8D25BB-D600-4DDB-A4B4-73974FE3663F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductName"
+              DTS:DTSID="{D7DFABE8-CA54-4266-ADD1-06B3582C3590}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{AD3835AC-DFA2-4817-BD8E-55E11C4B33F1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Price"
+              DTS:DTSID="{B6F80A02-825C-43D4-8947-36EB2A2EA5F6}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ICS-LT-J1J8HK3\SQLEXPRESS.RetailDW.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DAB48DC8-23F5-4D3F-93E4-206A4BB42605}"
+      DTS:ObjectName="ICS-LT-J1J8HK3\SQLEXPRESS.RetailDW.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ICS-LT-J1J8HK3\SQLEXPRESS;User ID=sa;Initial Catalog=RetailDW;Provider=MSOLEDBSQL19.1;Trust Server Certificate=True;Application Name=SSIS-03_LoadProducts-{DAB48DC8-23F5-4D3F-93E4-206A4BB42605}ICS-LT-J1J8HK3\SQLEXPRESS.RetailDW.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAeWuXFVFX6ECqFcE2vIzcAQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADgnrULdDAW9tY/sp8Y5dOlvDU1qn90onN/v6GoVe527QAAAAAOgAAAAAIAACAAAADvTngqaOW1aRXzYWM5nE4BxgroCOLOAsbaJw2Xz3a4TyAAAACEdLb6Mtp9PLClHduXIGel7rszT2O8vYIlGm4mm5kU90AAAABevJDWqn9m9kVAd6i/YVQmfu+p/sXXJXwiIXbKjpmibb2SqU+QeG0stL7R9YZR+2JFkrnSmV3fnzZDLna5poDb</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{33017F5E-2F7B-44A5-9294-3FF3BB0F4305}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Project::ArchivePath] + &quot;\\&quot;+ @[User::ArchiveFilePath]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ArchiveFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Archive\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Archive\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Archive\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Archive\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Archive\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Archive\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Archive\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Archive\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Archive\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Archive\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Archive\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{75AF1B3A-E384-4F7C-951D-22E6E412823D}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="AuditID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D08AE968-EDEF-4394-B262-9DEFCF17601C}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Project::SourcePath] + &quot;\\&quot;+ @[User::CurrentFilePath]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CurrentFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Input\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Input\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Input\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Input\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Input\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Input\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Input\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Input\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Input\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Input\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Input\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{25CE675A-0850-4467-AD7B-A6F3AE34C404}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Project::ErrorPath] + &quot;\\&quot; + @[User::ErrorFilePath]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ErrorFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Error\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Error\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Error\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Error\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Error\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Error\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Error\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Error\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Error\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Error\C:\Users\prkarki\Desktop\Retail_Sales_ETL\Data\Error\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4146F3FE-AB76-4907-AA64-6C094759FD44}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileImportID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EFDAB6F6-B06F-4933-805B-7545FF3DF5B8}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RecordInserted">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A74514B8-EB18-4EB0-B65F-6B2E907453A1}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RecordRead">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C9FA397A-D229-4BBA-B7BD-9B7E83BBEE92}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RecordRejected">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{98C8CB97-A9B6-4CA7-8EBE-E71072DE2591}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">Products.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{86081336-B101-41ED-A21B-A38D119CFB83}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Status">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT_Load_Products"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{5BA10944-7250-4911-9304-914EA822EA81}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_Load_Products"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_Load_Products\Add sourceFile name"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add sourceFile name"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\Add sourceFile name.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\Add sourceFile name.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT_Load_Products\Add sourceFile name.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Add sourceFile name.Outputs[Derived Column Output].Columns[SourceFilePath]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\DFT_Load_Products\Add sourceFile name.Outputs[Derived Column Output].Columns[SourceFilePath]"
+                      name="SourceFilePath"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,100,1252)@[User::SourceFileName]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,100,1252)@[User::SourceFileName]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Products\Add sourceFile name.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT_Load_Products\Add sourceFile name.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Add sourceFile name.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Add sourceFile name.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Add sourceFile name.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Add sourceFile name.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\Convert Error message to string"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Convert Error message to string"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\Convert Error message to string.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Convert Error message to string.Inputs[Data Conversion Input].Columns[ErrorReason]"
+                      cachedDataType="wstr"
+                      cachedLength="46"
+                      cachedName="ErrorReason"
+                      lineageId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ErrorReason]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\Convert Error message to string.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT_Load_Products\Convert Error message to string.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Convert Error message to string.Outputs[Data Conversion Output].Columns[Copy of ErrorReason]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="500"
+                      lineageId="Package\DFT_Load_Products\Convert Error message to string.Outputs[Data Conversion Output].Columns[Copy of ErrorReason]"
+                      name="Copy of ErrorReason"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ErrorReason]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Products\Convert Error message to string.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT_Load_Products\Convert Error message to string.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Convert Error message to string.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Convert Error message to string.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Convert Error message to string.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Convert Error message to string.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\Convert Price"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Convert Price"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\Convert Price.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Convert Price.Inputs[Data Conversion Input].Columns[Price]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Price"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Price]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT_Load_Products\Convert Price.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Output].Columns[Price_decimal]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Output].Columns[Price_decimal]"
+                      name="Price_decimal"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Price]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT_Load_Products\Convert Price.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\CS_Validate_Products"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="CS_Validate_Products"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\CS_Validate_Products.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\CS_Validate_Products.Inputs[Conditional Split Input].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\CS_Validate_Products.Inputs[Conditional Split Input].Columns[ProductName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ProductName"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductName]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\CS_Validate_Products.Inputs[Conditional Split Input].Columns[Price_decimal]"
+                      cachedDataType="numeric"
+                      cachedName="Price_decimal"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Output].Columns[Price_decimal]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\CS_Validate_Products.Outputs[Missing_ProductID]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Missing_ProductID"
+                  synchronousInputId="Package\DFT_Load_Products\CS_Validate_Products.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductID]}) || [TRIM](#{Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductID]}) == ""</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(ProductID) || TRIM(ProductID) == ""</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Products\CS_Validate_Products.Outputs[MissingProductName]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="MissingProductName"
+                  synchronousInputId="Package\DFT_Load_Products\CS_Validate_Products.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductName]}) || [TRIM](#{Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductName]}) == ""</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(ProductName) || TRIM(ProductName) == ""</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Products\CS_Validate_Products.Outputs[InvalidPrice]"
+                  description="Output 3 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="InvalidPrice"
+                  synchronousInputId="Package\DFT_Load_Products\CS_Validate_Products.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Output].Columns[Price_decimal]} &lt;= 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Price_decimal &lt;= 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">2</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Products\CS_Validate_Products.Outputs[Valid_Products]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Valid_Products"
+                  synchronousInputId="Package\DFT_Load_Products\CS_Validate_Products.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Products\CS_Validate_Products.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\DFT_Load_Products\CS_Validate_Products.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\CS_Validate_Products.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\CS_Validate_Products.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\CS_Validate_Products.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\CS_Validate_Products.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\DC_Clean_Products"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DC_Clean_Products"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\DC_Clean_Products.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\DC_Clean_Products.Inputs[Derived Column Input].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductID]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductID]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(ProductID)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\DC_Clean_Products.Inputs[Derived Column Input].Columns[ProductName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ProductName"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductName]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductName]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(ProductName)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\DC_Clean_Products.Inputs[Derived Column Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Category"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Category]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Category]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(Category)</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\DC_Clean_Products.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT_Load_Products\DC_Clean_Products.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Products\DC_Clean_Products.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT_Load_Products\DC_Clean_Products.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\DC_Clean_Products.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\DC_Clean_Products.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\DC_Clean_Products.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\DC_Clean_Products.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\FFS_ProductsCSV"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="FFS_ProductsCSV"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Load_Products\FFS_ProductsCSV.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FFC_Products]"
+                  connectionManagerRefId="Package.ConnectionManagers[FFC_Products]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].ExternalColumns[ProductID]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].ExternalColumns[ProductName]"
+                      length="100"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductName]"
+                      name="ProductName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="100"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Price]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].ExternalColumns[Price]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Price]"
+                      name="Price"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].ExternalColumns[ProductID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].ExternalColumns[ProductName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="ProductName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].ExternalColumns[Price]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Price" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\Insert into DimProducts"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert into DimProducts"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimProduct]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Load_Products\Insert into DimProducts.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ICS-LT-J1J8HK3\SQLEXPRESS.RetailDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[ICS-LT-J1J8HK3\SQLEXPRESS.RetailDW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      externalMetadataColumnId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input].Columns[ProductName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ProductName"
+                      externalMetadataColumnId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductName]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input].Columns[Price_decimal]"
+                      cachedDataType="numeric"
+                      cachedName="Price_decimal"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[Price]"
+                      lineageId="Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Output].Columns[Price_decimal]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductKey]"
+                      dataType="i4"
+                      name="ProductKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="ProductName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[Price]"
+                      dataType="numeric"
+                      name="Price"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp2"
+                      name="CreatedDate"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp2"
+                      name="ModifiedDate"
+                      scale="7" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\Insert into DimProducts.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Insert into DimProducts.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Insert into DimProducts.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Insert into DimProducts.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Insert into DimProducts.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\Insert into rejecte records"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert into rejecte records"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[RejectedRecords]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Load_Products\Insert into rejecte records.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ICS-LT-J1J8HK3\SQLEXPRESS.RetailDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[ICS-LT-J1J8HK3\SQLEXPRESS.RetailDW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\Insert into rejecte records.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Insert into rejecte records.Inputs[OLE DB Destination Input].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      externalMetadataColumnId="Package\DFT_Load_Products\Insert into rejecte records.Inputs[OLE DB Destination Input].ExternalColumns[RecordKey]"
+                      lineageId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Insert into rejecte records.Inputs[OLE DB Destination Input].Columns[Copy of ErrorReason]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="Copy of ErrorReason"
+                      externalMetadataColumnId="Package\DFT_Load_Products\Insert into rejecte records.Inputs[OLE DB Destination Input].ExternalColumns[ErrorReason]"
+                      lineageId="Package\DFT_Load_Products\Convert Error message to string.Outputs[Data Conversion Output].Columns[Copy of ErrorReason]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Insert into rejecte records.Inputs[OLE DB Destination Input].Columns[SourceFilePath]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="SourceFilePath"
+                      externalMetadataColumnId="Package\DFT_Load_Products\Insert into rejecte records.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                      lineageId="Package\DFT_Load_Products\Add sourceFile name.Outputs[Derived Column Output].Columns[SourceFilePath]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\Insert into rejecte records.Inputs[OLE DB Destination Input].ExternalColumns[RejectedRecordID]"
+                      dataType="i4"
+                      name="RejectedRecordID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\Insert into rejecte records.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="SourceFile" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\Insert into rejecte records.Inputs[OLE DB Destination Input].ExternalColumns[RecordKey]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="RecordKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\Insert into rejecte records.Inputs[OLE DB Destination Input].ExternalColumns[ErrorReason]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="ErrorReason" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Products\Insert into rejecte records.Inputs[OLE DB Destination Input].ExternalColumns[ErrorDate]"
+                      dataType="dbTimeStamp2"
+                      name="ErrorDate"
+                      scale="7" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\Insert into rejecte records.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_Load_Products\Insert into rejecte records.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Insert into rejecte records.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Insert into rejecte records.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Insert into rejecte records.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Insert into rejecte records.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\Inserted Record Count"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Inserted Record Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::RecordInserted</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\Inserted Record Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\Inserted Record Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\DFT_Load_Products\Inserted Record Count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\Invalid_price"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Invalid_price"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\Invalid_price.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\Invalid_price.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT_Load_Products\Invalid_price.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Invalid_price.Outputs[Derived Column Output].Columns[ErrorReason]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="46"
+                      lineageId="Package\DFT_Load_Products\Invalid_price.Outputs[Derived Column Output].Columns[ErrorReason]"
+                      name="ErrorReason"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Invalid Price, price must be greater than zero"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Invalid Price, price must be greater than zero"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Products\Invalid_price.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT_Load_Products\Invalid_price.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Invalid_price.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Invalid_price.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Invalid_price.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Invalid_price.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select ProductID from DimProduct;</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select ProductID from DimProduct;) [refTable]
+where [refTable].[ProductID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductID" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Load_Products\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ICS-LT-J1J8HK3\SQLEXPRESS.RetailDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[ICS-LT-J1J8HK3\SQLEXPRESS.RetailDW.sa]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Lookup.Inputs[Lookup Input].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ProductID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DFT_Load_Products\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Products\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DFT_Load_Products\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Products\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DFT_Load_Products\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\Matched Duplicate"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Matched Duplicate"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\Matched Duplicate.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\Matched Duplicate.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT_Load_Products\Matched Duplicate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Matched Duplicate.Outputs[Derived Column Output].Columns[ErrorReason]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="29"
+                      lineageId="Package\DFT_Load_Products\Matched Duplicate.Outputs[Derived Column Output].Columns[ErrorReason]"
+                      name="ErrorReason"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Matched value found duplicate"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Matched value found duplicate"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Products\Matched Duplicate.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT_Load_Products\Matched Duplicate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Matched Duplicate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Matched Duplicate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Matched Duplicate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Matched Duplicate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\Merging all the errors reason"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Merging all the errors reason"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 1].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ProductID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 1].Columns[ProductName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ProductName"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ProductName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 1].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Category"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Category]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Category]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 1].Columns[Price]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Price"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Price]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Price]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 1].Columns[Price_decimal]"
+                      cachedDataType="numeric"
+                      cachedName="Price_decimal"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Output].Columns[Price_decimal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Price_decimal]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 1].Columns[ErrorReason]"
+                      cachedDataType="wstr"
+                      cachedLength="18"
+                      cachedName="ErrorReason"
+                      lineageId="Package\DFT_Load_Products\Missing_ProductID.Outputs[Derived Column Output].Columns[ErrorReason]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ErrorReason]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 2].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ProductID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 2].Columns[ProductName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ProductName"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ProductName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 2].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Category"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Category]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Category]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 2].Columns[Price]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Price"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Price]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Price]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 2].Columns[Price_decimal]"
+                      cachedDataType="numeric"
+                      cachedName="Price_decimal"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Output].Columns[Price_decimal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Price_decimal]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 2].Columns[ErrorReason]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ErrorReason"
+                      lineageId="Package\DFT_Load_Products\Missing_ProductName.Outputs[Derived Column Output].Columns[ErrorReason]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ErrorReason]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 3].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ProductID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 3].Columns[ProductName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ProductName"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ProductName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 3].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Category"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Category]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Category]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 3].Columns[Price]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Price"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Price]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Price]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 3].Columns[Price_decimal]"
+                      cachedDataType="numeric"
+                      cachedName="Price_decimal"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Output].Columns[Price_decimal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Price_decimal]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 3].Columns[ErrorReason]"
+                      cachedDataType="wstr"
+                      cachedLength="46"
+                      cachedName="ErrorReason"
+                      lineageId="Package\DFT_Load_Products\Invalid_price.Outputs[Derived Column Output].Columns[ErrorReason]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ErrorReason]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 4]"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 4].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ProductID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 4].Columns[ProductName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ProductName"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[ProductName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ProductName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 4].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Category"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Category]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Category]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 4].Columns[Price]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Price"
+                      lineageId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output].Columns[Price]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Price]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 4].Columns[Price_decimal]"
+                      cachedDataType="numeric"
+                      cachedName="Price_decimal"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Output].Columns[Price_decimal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Price_decimal]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 4].Columns[ErrorReason]"
+                      cachedDataType="wstr"
+                      cachedLength="29"
+                      cachedName="ErrorReason"
+                      lineageId="Package\DFT_Load_Products\Matched Duplicate.Outputs[Derived Column Output].Columns[ErrorReason]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ErrorReason]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 6]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 6">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ProductID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ProductID]"
+                      name="ProductID" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ProductName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ProductName]"
+                      name="ProductName" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Category]"
+                      name="Category" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Price]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Price]"
+                      name="Price" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Price_decimal]"
+                      dataType="numeric"
+                      lineageId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[Price_decimal]"
+                      name="Price_decimal"
+                      precision="18"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ErrorReason]"
+                      dataType="wstr"
+                      length="46"
+                      lineageId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1].Columns[ErrorReason]"
+                      name="ErrorReason" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\Missing_ProductID"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Missing_ProductID"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\Missing_ProductID.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\Missing_ProductID.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT_Load_Products\Missing_ProductID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Missing_ProductID.Outputs[Derived Column Output].Columns[ErrorReason]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="18"
+                      lineageId="Package\DFT_Load_Products\Missing_ProductID.Outputs[Derived Column Output].Columns[ErrorReason]"
+                      name="ErrorReason"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Missing product ID"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Missing product ID"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Products\Missing_ProductID.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT_Load_Products\Missing_ProductID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Missing_ProductID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Missing_ProductID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Missing_ProductID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Missing_ProductID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\Missing_ProductName"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Missing_ProductName"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\Missing_ProductName.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\Missing_ProductName.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT_Load_Products\Missing_ProductName.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Missing_ProductName.Outputs[Derived Column Output].Columns[ErrorReason]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\DFT_Load_Products\Missing_ProductName.Outputs[Derived Column Output].Columns[ErrorReason]"
+                      name="ErrorReason"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Missing Product Name"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Missing Product Name"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Products\Missing_ProductName.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT_Load_Products\Missing_ProductName.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Missing_ProductName.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Missing_ProductName.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Products\Missing_ProductName.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Products\Missing_ProductName.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\Total records read"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Total records read">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::RecordRead</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\Total records read.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\Total records read.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\DFT_Load_Products\Total records read.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Products\Total reject count"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Total reject count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::RecordRejected</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Products\Total reject count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Products\Total reject count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\DFT_Load_Products\Total reject count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_Load_Products.Paths[Data Conversion Output]"
+              endId="Package\DFT_Load_Products\Total reject count.Inputs[Row Count Input 1]"
+              name="Data Conversion Output"
+              startId="Package\DFT_Load_Products\Convert Error message to string.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Data Conversion Output1]"
+              endId="Package\DFT_Load_Products\CS_Validate_Products.Inputs[Conditional Split Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT_Load_Products\Convert Price.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Derived Column Output]"
+              endId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 3]"
+              name="Derived Column Output"
+              startId="Package\DFT_Load_Products\Invalid_price.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Derived Column Output1]"
+              endId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DFT_Load_Products\Missing_ProductName.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Derived Column Output2]"
+              endId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DFT_Load_Products\Missing_ProductID.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Derived Column Output3]"
+              endId="Package\DFT_Load_Products\Insert into rejecte records.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DFT_Load_Products\Add sourceFile name.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Derived Column Output4]"
+              endId="Package\DFT_Load_Products\Convert Price.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\DFT_Load_Products\DC_Clean_Products.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Derived Column Output5]"
+              endId="Package\DFT_Load_Products\Merging all the errors reason.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\DFT_Load_Products\Matched Duplicate.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Flat File Source Output]"
+              endId="Package\DFT_Load_Products\Total records read.Inputs[Row Count Input 1]"
+              name="Flat File Source Output"
+              startId="Package\DFT_Load_Products\FFS_ProductsCSV.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[InvalidPrice]"
+              endId="Package\DFT_Load_Products\Invalid_price.Inputs[Derived Column Input]"
+              name="InvalidPrice"
+              startId="Package\DFT_Load_Products\CS_Validate_Products.Outputs[InvalidPrice]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Lookup Match Output]"
+              endId="Package\DFT_Load_Products\Matched Duplicate.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\DFT_Load_Products\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Lookup No Match Output]"
+              endId="Package\DFT_Load_Products\Inserted Record Count.Inputs[Row Count Input 1]"
+              name="Lookup No Match Output"
+              startId="Package\DFT_Load_Products\Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[MissingProductName]"
+              endId="Package\DFT_Load_Products\Missing_ProductName.Inputs[Derived Column Input]"
+              name="MissingProductName"
+              startId="Package\DFT_Load_Products\CS_Validate_Products.Outputs[MissingProductName]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Missing_ProductID]"
+              endId="Package\DFT_Load_Products\Missing_ProductID.Inputs[Derived Column Input]"
+              name="Missing_ProductID"
+              startId="Package\DFT_Load_Products\CS_Validate_Products.Outputs[Missing_ProductID]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Row Count Output 1]"
+              endId="Package\DFT_Load_Products\DC_Clean_Products.Inputs[Derived Column Input]"
+              name="Row Count Output 1"
+              startId="Package\DFT_Load_Products\Total records read.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Row Count Output 11]"
+              endId="Package\DFT_Load_Products\Add sourceFile name.Inputs[Derived Column Input]"
+              name="Row Count Output 1"
+              startId="Package\DFT_Load_Products\Total reject count.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Row Count Output 12]"
+              endId="Package\DFT_Load_Products\Insert into DimProducts.Inputs[OLE DB Destination Input]"
+              name="Row Count Output 1"
+              startId="Package\DFT_Load_Products\Inserted Record Count.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Union All Output 1]"
+              endId="Package\DFT_Load_Products\Convert Error message to string.Inputs[Data Conversion Input]"
+              name="Union All Output 1"
+              startId="Package\DFT_Load_Products\Merging all the errors reason.Outputs[Union All Output 1]" />
+            <path
+              refId="Package\DFT_Load_Products.Paths[Valid_Products]"
+              endId="Package\DFT_Load_Products\Lookup.Inputs[Lookup Input]"
+              name="Valid_Products"
+              startId="Package\DFT_Load_Products\CS_Validate_Products.Outputs[Valid_Products]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Move file to the archive"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:DTSID="{98C98EC7-BC54-4D85-8762-BDEF7633A8FA}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Move file to the archive"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="MoveFile"
+          TaskSourcePath="User::CurrentFilePath"
+          TaskIsSourceVariable="True"
+          TaskDestinationPath="User::ArchiveFilePath"
+          TaskIsDestinationVariable="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Start Audit"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{994E5483-AC86-433C-96A7-8B7A8217CF15}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Start Audit"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DAB48DC8-23F5-4D3F-93E4-206A4BB42605}"
+          SQLTask:SqlStatementSource="INSERT INTO Audit (PackageName, SourceFile, StartTime, Status)&#xA;OUTPUT INSERTED.AuditID&#xA;VALUES ('LoadProducts', 'Products.csv', GETDATE(), 'RUNNING');"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::AuditID" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Start FileImports"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{2D8C95F2-D8A4-4871-9BC2-73777A6DA158}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Start FileImports"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DAB48DC8-23F5-4D3F-93E4-206A4BB42605}"
+          SQLTask:SqlStatementSource="INSERT INTO FileImports (FileName, FileImportStatus, CreatedDate, UpdatedDate)&#xA;OUTPUT INSERTED.FileImportID&#xA;VALUES ('Products.csv', 'Received', GETDATE(), GETDATE());"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::FileImportID" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Status mapping"
+      DTS:CreationName="Microsoft.ExpressionTask"
+      DTS:Description="Expression Task"
+      DTS:DTSID="{A4C50854-26C6-403F-900F-13E519A7D159}"
+      DTS:ExecutableType="Microsoft.ExpressionTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Status mapping"
+      DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExpressionTask
+          Expression="@[User::Status] =  @[User::RecordRejected] &gt; 0 ? &quot;Successful  with rejections&quot; : &quot;Successful&quot;" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Audit End"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{8C97C584-5DAB-4E68-B2DC-3424B2D2D0A8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Audit End"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DAB48DC8-23F5-4D3F-93E4-206A4BB42605}"
+          SQLTask:SqlStatementSource="UPDATE Audit&#xA;SET EndTime = GETDATE(),&#xA;    RecordsRead = ?,&#xA;    RecordsInserted = ?,&#xA;    RecordsRejected = ?,&#xA;    Status = ?&#xA;WHERE AuditID = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::RecordRead"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::RecordInserted"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::RecordRejected"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="3"
+            SQLTask:DtsVariableName="User::Status"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="4"
+            SQLTask:DtsVariableName="User::AuditID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update file import"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{521D7F9F-7A9D-4762-820A-F3CC4AC095F9}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update file import"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DAB48DC8-23F5-4D3F-93E4-206A4BB42605}"
+          SQLTask:SqlStatementSource="UPDATE FileImports&#xA;SET FileImportStatus = ?,&#xA;    ArchivePath = ?,&#xA;    UpdatedDate = GETDATE()&#xA;WHERE FileImportID = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::Status"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::ArchiveFilePath"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::FileImportID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{DAE6044B-2B4C-4A33-936B-D66B2086C89A}"
+      DTS:From="Package\Start Audit"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT_Load_Products" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{36E1A4D0-F4BD-4D46-B54F-CF407219EDCE}"
+      DTS:From="Package\Start FileImports"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\DFT_Load_Products" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{66F1B52C-5ADA-40D2-AADE-AA51F370E449}"
+      DTS:From="Package\DFT_Load_Products"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Status mapping" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{BE8B3BFB-DC2F-4B26-9624-3331CB819CE6}"
+      DTS:From="Package\Status mapping"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Update Audit End" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{CD104580-1056-4CA3-B277-6561448281FD}"
+      DTS:From="Package\Update Audit End"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Move file to the archive" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{52C21299-7C4D-4CC8-B744-C7A04939CD7D}"
+      DTS:From="Package\Move file to the archive"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Update file import" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="178.666666666667,42.6666666666667"
+          Id="Package\DFT_Load_Products"
+          TopLeft="253.749988656491,49.9473678726404" />
+        <NodeLayout
+          Size="189.333333333334,42.6666666666667"
+          Id="Package\Move file to the archive"
+          TopLeft="339.999984800816,335.263154213613" />
+        <NodeLayout
+          Size="129.333333333334,42.6666666666667"
+          Id="Package\Start Audit"
+          TopLeft="81.8749963399024,50.6315783914437" />
+        <NodeLayout
+          Size="157.333333333334,42"
+          Id="Package\Start FileImports"
+          TopLeft="178.749992009252,194.298243487999" />
+        <NodeLayout
+          Size="153.333333333334,42.6666666666667"
+          Id="Package\Status mapping"
+          TopLeft="492.499977983535,123.842103903396" />
+        <NodeLayout
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\Update Audit End"
+          TopLeft="446.249980051071,243.578944693972" />
+        <NodeLayout
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\Update file import"
+          TopLeft="163.749992679805,367.421048597369" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="211.208329673236,71.6228064653754">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="42.5416589832554,0"
+              Start="0,0"
+              End="35.0416589832554,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="35.0416589832554,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="257.416658675919,194.298243487999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="85.6666633139056,-101.684208948692"
+              Start="0,0"
+              End="85.6666633139056,-94.1842089486917">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-46.8421044743458" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-46.8421044743458"
+                    Point2="0,-50.8421044743458"
+                    Point3="4,-50.8421044743458" />
+                  <mssgle:LineSegment
+                    End="81.6666633139056,-50.8421044743458" />
+                  <mssgle:CubicBezierSegment
+                    Point1="81.6666633139056,-50.8421044743458"
+                    Point2="85.6666633139056,-50.8421044743458"
+                    Point3="85.6666633139056,-54.8421044743458" />
+                  <mssgle:LineSegment
+                    End="85.6666633139056,-94.1842089486917" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="371.527766434269,92.6140345393071">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="197.638878215933,31.228069364089"
+              Start="0,0"
+              End="197.638878215933,23.728069364089">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.65753107361003" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.65753107361003"
+                    Point2="0,12.65753107361"
+                    Point3="4,12.65753107361" />
+                  <mssgle:LineSegment
+                    End="193.638878215933,12.65753107361" />
+                  <mssgle:CubicBezierSegment
+                    Point1="193.638878215933,12.65753107361"
+                    Point2="197.638878215933,12.65753107361"
+                    Point3="197.638878215933,16.65753107361" />
+                  <mssgle:LineSegment
+                    End="197.638878215933,23.728069364089" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="569.166644650202,166.508770570063">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-41.5833312657973,77.0701741239096"
+              Start="0,0"
+              End="-41.5833312657973,69.5701741239096">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5350870619548" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.5350870619548"
+                    Point2="0,38.5350870619548"
+                    Point3="-4,38.5350870619548" />
+                  <mssgle:LineSegment
+                    End="-37.5833312657973,38.5350870619548" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-37.5833312657973,38.5350870619548"
+                    Point2="-41.5833312657973,38.5350870619548"
+                    Point3="-41.5833312657973,42.5350870619548" />
+                  <mssgle:LineSegment
+                    End="-41.5833312657973,69.5701741239096" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="527.583313384404,286.245611360639">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-92.9166619169217,49.0175428529748"
+              Start="0,0"
+              End="-92.9166619169217,41.5175428529748">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5087714264874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5087714264874"
+                    Point2="0,24.5087714264874"
+                    Point3="-4,24.5087714264874" />
+                  <mssgle:LineSegment
+                    End="-88.9166619169217,24.5087714264874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-88.9166619169217,24.5087714264874"
+                    Point2="-92.9166619169217,24.5087714264874"
+                    Point3="-92.9166619169217,28.5087714264874" />
+                  <mssgle:LineSegment
+                    End="-92.9166619169217,41.5175428529748" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="339.999984800816,344.921048597369">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-94.9166587876782,22.5"
+              Start="0,0"
+              End="-94.9166587876782,15">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-90.9166587876782,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-90.9166587876782,0"
+                    Point2="-94.9166587876782,0"
+                    Point3="-94.9166587876782,4" />
+                  <mssgle:LineSegment
+                    End="-94.9166587876782,15" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT_Load_Products">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="186.666666666667,42.6666666666667"
+          Id="Package\DFT_Load_Products\Inserted Record Count"
+          TopLeft="41.8749984633179,612.947368514958" />
+        <NodeLayout
+          Size="168,42.6666666666667"
+          Id="Package\DFT_Load_Products\Matched Duplicate"
+          TopLeft="254.833333333333,621.499999999999" />
+        <NodeLayout
+          Size="140,42.6666666666667"
+          Id="Package\DFT_Load_Products\Invalid_price"
+          TopLeft="483.833333333333,621.499999999999" />
+        <NodeLayout
+          Size="169.333333333334,42.6666666666667"
+          Id="Package\DFT_Load_Products\Missing_ProductID"
+          TopLeft="684.166666666667,621.499999999999" />
+        <NodeLayout
+          Size="169.333333333334,42.6666666666667"
+          Id="Package\DFT_Load_Products\FFS_ProductsCSV"
+          TopLeft="579.916670969377,16.4473683008526" />
+        <NodeLayout
+          Size="186.666666666667,42.6666666666667"
+          Id="Package\DFT_Load_Products\CS_Validate_Products"
+          TopLeft="576.250004079193,428.482456005125" />
+        <NodeLayout
+          Size="144,42.6666666666667"
+          Id="Package\DFT_Load_Products\Convert Price"
+          TopLeft="622.583336294939,335.394736601704" />
+        <NodeLayout
+          Size="190.666666666667,42.6666666666667"
+          Id="Package\DFT_Load_Products\Insert into DimProducts"
+          TopLeft="38.3124985331671,823.377191893143" />
+        <NodeLayout
+          Size="177.333333333334,42.6666666666667"
+          Id="Package\DFT_Load_Products\DC_Clean_Products"
+          TopLeft="595.916670075308,227.254385784612" />
+        <NodeLayout
+          Size="161.333333333334,42.6666666666667"
+          Id="Package\DFT_Load_Products\Total reject count"
+          TopLeft="688.166666666667,929.499999999999" />
+        <NodeLayout
+          Size="166.666666666667,42.6666666666667"
+          Id="Package\DFT_Load_Products\Total records read"
+          TopLeft="620.00000257045,124.587719117945" />
+        <NodeLayout
+          Size="186.666666666667,42.6666666666667"
+          Id="Package\DFT_Load_Products\Missing_ProductName"
+          TopLeft="821.5,518.833333333332" />
+        <NodeLayout
+          Size="114.666666666667,42.6666666666667"
+          Id="Package\DFT_Load_Products\Lookup"
+          TopLeft="328.690467329607,493.433581470044" />
+        <NodeLayout
+          Size="200,42.6666666666667"
+          Id="Package\DFT_Load_Products\Insert into rejecte records"
+          TopLeft="668.833333333333,1134.83333333333" />
+        <NodeLayout
+          Size="230.666666666667,42.6666666666667"
+          Id="Package\DFT_Load_Products\Convert Error message to string"
+          TopLeft="653.5,826.833333333332" />
+        <NodeLayout
+          Size="180,42.6666666666667"
+          Id="Package\DFT_Load_Products\Add sourceFile name"
+          TopLeft="678.833333333333,1032.16666666667" />
+        <NodeLayout
+          Size="216,42.6666666666667"
+          Id="Package\DFT_Load_Products\Merging all the errors reason"
+          TopLeft="660.833333333333,724.166666666666" />
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Union All Output 1]"
+          TopLeft="768.833333333333,766.833333333332">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Row Count Output 12]"
+          TopLeft="134.427081831576,655.614035181624">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,167.763156711519"
+              Start="0,0"
+              End="0,160.263156711519">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,160.263156711519" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,72.1315783557595,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Row Count Output 11]"
+          TopLeft="768.833333333333,972.166666666666">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Row Count Output 1]"
+          TopLeft="703.333335903784,167.254385784612">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-18.7499991618095,60.0000000000003"
+              Start="0,0"
+              End="-18.7499991618095,52.5000000000003">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.0000000000002" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.0000000000002"
+                    Point2="0,30.0000000000002"
+                    Point3="-4,30.0000000000002" />
+                  <mssgle:LineSegment
+                    End="-14.7499991618095,30.0000000000002" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14.7499991618095,30.0000000000002"
+                    Point2="-18.7499991618095,30.0000000000002"
+                    Point3="-18.7499991618095,34.0000000000002" />
+                  <mssgle:LineSegment
+                    End="-18.7499991618095,52.5000000000003" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Missing_ProductID]"
+          TopLeft="669.583337412526,471.149122671792">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="99.2499959208072,150.350877328207"
+              Start="0,0"
+              End="99.2499959208072,142.850877328207">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.1754386641035" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,71.1754386641035"
+                    Point2="0,75.1754386641035"
+                    Point3="4,75.1754386641035" />
+                  <mssgle:LineSegment
+                    End="95.2499959208072,75.1754386641035" />
+                  <mssgle:CubicBezierSegment
+                    Point1="95.2499959208072,75.1754386641035"
+                    Point2="99.2499959208072,75.1754386641035"
+                    Point3="99.2499959208072,79.1754386641035" />
+                  <mssgle:LineSegment
+                    End="99.2499959208072,142.850877328207" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-0.664865320846388,80.1754386641035,100.5797265625,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[MissingProductName]"
+          TopLeft="714.250004079193,471.149122671792">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="200.58332925414,47.6842106615401"
+              Start="0,0"
+              End="200.58332925414,40.1842106615401">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.3424759544245" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.3424759544245"
+                    Point2="0,16.3424759544245"
+                    Point3="4,16.3424759544245" />
+                  <mssgle:LineSegment
+                    End="196.58332925414,16.3424759544245" />
+                  <mssgle:CubicBezierSegment
+                    Point1="196.58332925414,16.3424759544245"
+                    Point2="200.58332925414,16.3424759544245"
+                    Point3="200.58332925414,20.3424759544245" />
+                  <mssgle:LineSegment
+                    End="200.58332925414,40.1842106615401" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="45.1716646270702,21.3424759544245,110.24,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Lookup No Match Output]"
+          TopLeft="368.246022885163,536.100248136711">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-233.037691088511,76.847120378247"
+              Start="0,0"
+              End="-233.037691088511,69.347120378247">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.3733656590091" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.3733656590091"
+                    Point2="0,31.3733656590091"
+                    Point3="-4,31.3733656590091" />
+                  <mssgle:LineSegment
+                    End="-229.037691088511,31.3733656590091" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-229.037691088511,31.3733656590091"
+                    Point2="-233.037691088511,31.3733656590091"
+                    Point3="-233.037691088511,35.3733656590091" />
+                  <mssgle:LineSegment
+                    End="-233.037691088511,69.347120378247" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-172.325232263006,36.3733656590091,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Lookup Match Output]"
+          TopLeft="386.023800662941,536.10024813671">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-47.1904673296077,85.3997518632885"
+              Start="0,0"
+              End="-47.1904673296077,77.8997518632885">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.6998759316443" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.6998759316443"
+                    Point2="0,42.6998759316443"
+                    Point3="-4,42.6998759316443" />
+                  <mssgle:LineSegment
+                    End="-43.1904673296077,42.6998759316443" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-43.1904673296077,42.6998759316443"
+                    Point2="-47.1904673296077,42.6998759316443"
+                    Point3="-47.1904673296077,46.6998759316443" />
+                  <mssgle:LineSegment
+                    End="-47.1904673296077,77.8997518632885" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-80.6552727273039,47.6998759316443,114.120078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[InvalidPrice]"
+          TopLeft="624.91667074586,471.149122671792">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-71.0833374125266,150.350877328207"
+              Start="0,0"
+              End="-71.0833374125266,142.850877328207">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5287044364277" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.5287044364277"
+                    Point2="0,51.5287044364277"
+                    Point3="-4,51.5287044364277" />
+                  <mssgle:LineSegment
+                    End="-67.0833374125266,51.5287044364277" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-67.0833374125266,51.5287044364277"
+                    Point2="-71.0833374125266,51.5287044364277"
+                    Point3="-71.0833374125266,55.5287044364277" />
+                  <mssgle:LineSegment
+                    End="-71.0833374125266,142.850877328207" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-70.3716687062633,56.5287044364277,69.66,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Flat File Source Output]"
+          TopLeft="664.583337636044,59.1140349675193">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38.7499982677398,65.4736841504258"
+              Start="0,0"
+              End="38.7499982677398,57.9736841504258">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.7368420752129" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.7368420752129"
+                    Point2="0,32.7368420752129"
+                    Point3="4,32.7368420752129" />
+                  <mssgle:LineSegment
+                    End="34.7499982677398,32.7368420752129" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.7499982677398,32.7368420752129"
+                    Point2="38.7499982677398,32.7368420752129"
+                    Point3="38.7499982677398,36.7368420752129" />
+                  <mssgle:LineSegment
+                    End="38.7499982677398,57.9736841504258" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Derived Column Output5]"
+          TopLeft="338.833333333333,664.166666666666">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="367.6,60"
+              Start="0,0"
+              End="367.6,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.1875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.1875"
+                    Point2="0,42.1875"
+                    Point3="4,42.1875" />
+                  <mssgle:LineSegment
+                    End="363.6,42.1875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="363.6,42.1875"
+                    Point2="367.6,42.1875"
+                    Point3="367.6,46.1875" />
+                  <mssgle:LineSegment
+                    End="367.6,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Derived Column Output4]"
+          TopLeft="684.583336741974,269.921052451279">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.99999955296437,65.4736841504256"
+              Start="0,0"
+              End="9.99999955296437,57.9736841504256">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.7368420752128" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.7368420752128"
+                    Point2="0,32.7368420752128"
+                    Point3="4,32.7368420752128" />
+                  <mssgle:LineSegment
+                    End="5.99999955296437,32.7368420752128" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.99999955296437,32.7368420752128"
+                    Point2="9.99999955296437,32.7368420752128"
+                    Point3="9.99999955296437,36.7368420752128" />
+                  <mssgle:LineSegment
+                    End="9.99999955296437,57.9736841504256" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Derived Column Output3]"
+          TopLeft="768.833333333333,1074.83333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000002"
+              Start="0,0"
+              End="0,52.5000000000002">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000002" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Derived Column Output2]"
+          TopLeft="768.833333333333,664.166666666666">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.8,60"
+              Start="0,0"
+              End="20.8,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.1967213114754" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.1967213114754"
+                    Point2="0,33.1967213114754"
+                    Point3="4,33.1967213114754" />
+                  <mssgle:LineSegment
+                    End="16.8,33.1967213114754" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.8,33.1967213114754"
+                    Point2="20.8,33.1967213114754"
+                    Point3="20.8,37.1967213114754" />
+                  <mssgle:LineSegment
+                    End="20.8,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Derived Column Output1]"
+          TopLeft="914.833333333333,561.499999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-83.6,162.666666666667"
+              Start="0,0"
+              End="-83.6,155.166666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,110.375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,110.375"
+                    Point2="0,114.375"
+                    Point3="-4,114.375" />
+                  <mssgle:LineSegment
+                    End="-79.6,114.375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-79.6,114.375"
+                    Point2="-83.6,114.375"
+                    Point3="-83.6,118.375" />
+                  <mssgle:LineSegment
+                    End="-83.6,155.166666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Derived Column Output]"
+          TopLeft="553.833333333333,664.166666666666">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="194.2,60"
+              Start="0,0"
+              End="194.2,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.1967213114754" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.1967213114754"
+                    Point2="0,33.1967213114754"
+                    Point3="4,33.1967213114754" />
+                  <mssgle:LineSegment
+                    End="190.2,33.1967213114754" />
+                  <mssgle:CubicBezierSegment
+                    Point1="190.2,33.1967213114754"
+                    Point2="194.2,33.1967213114754"
+                    Point3="194.2,37.1967213114754" />
+                  <mssgle:LineSegment
+                    End="194.2,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Data Conversion Output1]"
+          TopLeft="694.583336294939,378.061403268371">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-24.9999988824122,50.4210527367542"
+              Start="0,0"
+              End="-24.9999988824122,42.9210527367542">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.2105263683771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.2105263683771"
+                    Point2="0,25.2105263683771"
+                    Point3="-4,25.2105263683771" />
+                  <mssgle:LineSegment
+                    End="-20.9999988824122,25.2105263683771" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-20.9999988824122,25.2105263683771"
+                    Point2="-24.9999988824122,25.2105263683771"
+                    Point3="-24.9999988824122,29.2105263683771" />
+                  <mssgle:LineSegment
+                    End="-24.9999988824122,42.9210527367542" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Data Conversion Output]"
+          TopLeft="768.833333333333,869.499999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Products.Paths[Valid_Products]"
+          TopLeft="576.250004079193,449.815789338459">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-132.892870082919,64.9511254649187"
+              Start="0,0"
+              End="-125.392870082919,64.9511254649187">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-62.4464350414597,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-62.4464350414597,0"
+                    Point2="-66.4464350414597,0"
+                    Point3="-66.4464350414597,4" />
+                  <mssgle:LineSegment
+                    End="-66.4464350414597,60.9511254649187" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-66.4464350414597,60.9511254649187"
+                    Point2="-66.4464350414597,64.9511254649187"
+                    Point3="-70.4464350414597,64.9511254649187" />
+                  <mssgle:LineSegment
+                    End="-125.392870082919,64.9511254649187" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.7971967602097,-17.0625,66.7015234375,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="ss"
+          ParentId="Package\DFT_Load_Products"
+          FontInfo="{assembly:Null}"
+          Size="38.6666666666667,40"
+          Id="55456b1e-c94a-4add-9bc0-ed5459ec5832"
+          TopLeft="5.5,5.5" />
+        <AnnotationLayout
+          Text="s"
+          ParentId="Package\DFT_Load_Products"
+          FontInfo="{assembly:Null}"
+          Size="34.6666666666667,40"
+          Id="e01c8756-2920-4ef4-873f-ac91c0c7a266"
+          TopLeft="1283.92851403249,150.526314136724" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Load_Products\Insert into DimProducts">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Load_Products\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Load_Products\Insert into rejecte records">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
